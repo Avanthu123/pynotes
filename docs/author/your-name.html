@@ -241,23 +241,41 @@
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number : &quot;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Enter valid integer.&quot;</span>
+    <span class="n">fact</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+          <span class="n">fact</span> <span class="o">*=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">fact</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>Enter a number :  8
+<div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-      <span class="n">factorial</span> <span class="o">*=</span> <span class="n">i</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Factorial is &quot;</span><span class="p">,</span> <span class="n">factorial</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="mf">5040</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>Factorial is  40320
+<div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">2432902008176640000</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Enter valid integer.&#39;
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
@@ -276,25 +294,31 @@
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter number of terms to print in fibonacci series: &quot;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fibonacci</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Enter valid positive integer.&quot;</span>
+
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>Enter number of terms to print in fibonacci series:  8
+<div class="highlight"><pre><span></span><code><span class="n">fibonacci</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">prevnum</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">nextnum</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">prevnum</span><span class="p">,</span> <span class="n">nextnum</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">num</span> <span class="o">-</span> <span class="mi">2</span><span class="p">:</span>
-      <span class="n">number</span> <span class="o">=</span> <span class="n">prevnum</span><span class="o">+</span><span class="n">nextnum</span>
-      <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-      <span class="n">prevnum</span> <span class="o">=</span> <span class="n">nextnum</span>
-      <span class="n">nextnum</span> <span class="o">=</span> <span class="n">number</span>
-      <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="mf">13</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="mf">1 …</span></code></pre></div><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
+<div class="highlight"><pre><span></span><code><span class="n">fibonacci</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Enter …</code></pre></div><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
@@ -329,6 +353,12 @@
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>&#39;lecoe&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">removeStars</span><span class="p">(</span><span class="s2">&quot;coding******&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;&#39;
 </code></pre></div>
 
 <hr>

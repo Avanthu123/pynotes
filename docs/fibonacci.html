@@ -52,29 +52,47 @@
 </h6>
 
 
-    <div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter number of terms to print in fibonacci series: &quot;</span><span class="p">))</span>
+    <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fibonacci</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Enter valid positive integer.&quot;</span>
+
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>Enter number of terms to print in fibonacci series:  8
+<div class="highlight"><pre><span></span><code><span class="n">fibonacci</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">prevnum</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">nextnum</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">prevnum</span><span class="p">,</span> <span class="n">nextnum</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">num</span> <span class="o">-</span> <span class="mi">2</span><span class="p">:</span>
-      <span class="n">number</span> <span class="o">=</span> <span class="n">prevnum</span><span class="o">+</span><span class="n">nextnum</span>
-      <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-      <span class="n">prevnum</span> <span class="o">=</span> <span class="n">nextnum</span>
-      <span class="n">nextnum</span> <span class="o">=</span> <span class="n">number</span>
-      <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="mf">13</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="mf">13</span><span class="w"> </span><span class="mf">21</span>
+<div class="highlight"><pre><span></span><code><span class="n">fibonacci</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Enter valid positive integer.&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fibonacci</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="mf">13</span><span class="w"> </span><span class="mf">21</span><span class="w"> </span><span class="mf">34</span><span class="w"> </span><span class="mf">55</span><span class="w"> </span><span class="mf">89</span><span class="w"> </span><span class="mf">144</span><span class="w"> </span><span class="mf">233</span><span class="w"> </span><span class="mf">377</span><span class="w"> </span><span class="mf">610</span><span class="w"> </span><span class="mf">987</span><span class="w"> </span><span class="mf">1597</span><span class="w"> </span><span class="mf">2584</span><span class="w"> </span><span class="mf">4181</span><span class="w"> </span><span class="mf">6765</span><span class="w"> </span><span class="mf">10946</span><span class="w"> </span><span class="mf">17711</span><span class="w"> </span><span class="mf">28657</span><span class="w"> </span><span class="mf">46368</span><span class="w"> </span><span class="mf">75025</span><span class="w"> </span><span class="mf">121393</span><span class="w"> </span><span class="mf">196418</span><span class="w"> </span><span class="mf">317811</span><span class="w"> </span><span class="mf">514229</span><span class="w"> </span><span class="mf">832040</span><span class="w"> </span><span class="mf">1346269</span><span class="w"> </span><span class="mf">2178309</span><span class="w"> </span><span class="mf">3524578</span><span class="w"> </span><span class="mf">5702887</span><span class="w"> </span><span class="mf">9227465</span><span class="w"> </span><span class="mf">14930352</span><span class="w"> </span><span class="mf">24157817</span><span class="w"> </span><span class="mf">39088169</span><span class="w"> </span><span class="mf">63245986</span><span class="w"> </span><span class="mf">102334155</span><span class="w"> </span><span class="mf">165580141</span><span class="w"> </span><span class="mf">267914296</span><span class="w"> </span><span class="mf">433494437</span><span class="w"> </span><span class="mf">701408733</span><span class="w"> </span><span class="mf">1134903170</span><span class="w"> </span><span class="mf">1836311903</span><span class="w"> </span><span class="mf">2971215073</span><span class="w"> </span><span class="mf">4807526976</span><span class="w"> </span><span class="mf">7778742049</span><span class="w"> </span><span class="mf">12586269025</span><span class="w"> </span><span class="mf">20365011074</span><span class="w"> </span><span class="mf">32951280099</span><span class="w"> </span><span class="mf">53316291173</span><span class="w"> </span><span class="mf">86267571272</span><span class="w"> </span><span class="mf">139583862445</span><span class="w"> </span><span class="mf">225851433717</span><span class="w"> </span><span class="mf">365435296162</span><span class="w"> </span><span class="mf">591286729879</span><span class="w"> </span><span class="mf">956722026041</span><span class="w"> </span><span class="mf">1548008755920</span><span class="w"> </span><span class="mf">2504730781961</span><span class="w"> </span><span class="mf">4052739537881</span><span class="w"> </span><span class="mf">6557470319842</span><span class="w"> </span><span class="mf">10610209857723</span><span class="w"> </span><span class="mf">17167680177565</span><span class="w"> </span><span class="mf">27777890035288</span><span class="w"> </span><span class="mf">44945570212853</span><span class="w"> </span><span class="mf">72723460248141</span><span class="w"> </span><span class="mf">117669030460994</span><span class="w"> </span><span class="mf">190392490709135</span><span class="w"> </span><span class="mf">308061521170129</span><span class="w"> </span><span class="mf">498454011879264</span><span class="w"> </span><span class="mf">806515533049393</span><span class="w"> </span><span class="mf">1304969544928657</span><span class="w"> </span><span class="mf">2111485077978050</span><span class="w"> </span><span class="mf">3416454622906707</span><span class="w"> </span><span class="mf">5527939700884757</span><span class="w"> </span><span class="mf">8944394323791464</span><span class="w"> </span><span class="mf">14472334024676221</span><span class="w"> </span><span class="mf">23416728348467685</span><span class="w"> </span><span class="mf">37889062373143906</span><span class="w"> </span><span class="mf">61305790721611591</span><span class="w"> </span><span class="mf">99194853094755497</span><span class="w"> </span><span class="mf">160500643816367088</span><span class="w"> </span><span class="mf">259695496911122585</span><span class="w"> </span><span class="mf">420196140727489673</span><span class="w"> </span><span class="mf">679891637638612258</span><span class="w"> </span><span class="mf">1100087778366101931</span><span class="w"> </span><span class="mf">1779979416004714189</span><span class="w"> </span><span class="mf">2880067194370816120</span><span class="w"> </span><span class="mf">4660046610375530309</span><span class="w"> </span><span class="mf">7540113804746346429</span><span class="w"> </span><span class="mf">12200160415121876738</span><span class="w"> </span><span class="mf">19740274219868223167</span><span class="w"> </span><span class="mf">31940434634990099905</span><span class="w"> </span><span class="mf">51680708854858323072</span><span class="w"> </span><span class="mf">83621143489848422977</span><span class="w"> </span><span class="mf">135301852344706746049</span><span class="w"> </span><span class="mf">218922995834555169026</span><span class="w"> </span><span class="mf">354224848179261915075</span>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 0</strong></p>
+<p><strong>Score: 5</strong></p>
 <p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
 
 </p>

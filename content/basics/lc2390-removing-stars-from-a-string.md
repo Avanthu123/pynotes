@@ -2,7 +2,7 @@
 title: Lc2390-Removing-Stars-From-A-String
 date: 2025-06-28
 author: Your Name
-cell_count: 3
+cell_count: 4
 score: 0
 ---
 
@@ -30,6 +30,18 @@ Solution().removeStars("leet**cod*e")
 
 
     'lecoe'
+
+
+
+
+```python
+Solution().removeStars("coding******")
+```
+
+
+
+
+    ''
 
 
 
