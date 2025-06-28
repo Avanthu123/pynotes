@@ -2,8 +2,8 @@
 title: Lc9-Palindrome-Number
 date: 2025-06-28
 author: Your Name
-cell_count: 3
-score: 0
+cell_count: 5
+score: 5
 ---
 
 https://leetcode.com/problems/palindrome-number/
@@ -40,5 +40,29 @@ Solution().isPalindrome(1345431)
 
 
 
+```python
+Solution().isPalindrome(-1)
+```
+
+
+
+
+    False
+
+
+
+
+```python
+Solution().isPalindrome(123)
+```
+
+
+
+
+    False
+
+
+
+
 ---
-**Score: 0**
+**Score: 5**

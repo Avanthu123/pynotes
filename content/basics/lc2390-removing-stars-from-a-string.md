@@ -2,8 +2,8 @@
 title: Lc2390-Removing-Stars-From-A-String
 date: 2025-06-28
 author: Your Name
-cell_count: 4
-score: 0
+cell_count: 5
+score: 5
 ---
 
 https://leetcode.com/problems/removing-stars-from-a-string/
@@ -46,5 +46,17 @@ Solution().removeStars("coding******")
 
 
 
+```python
+Solution().removeStars("Hello*")
+```
+
+
+
+
+    'Hell'
+
+
+
+
 ---
-**Score: 0**
+**Score: 5**

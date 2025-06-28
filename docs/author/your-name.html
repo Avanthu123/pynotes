@@ -361,8 +361,14 @@
 <div class="highlight"><pre><span></span><code>&#39;&#39;
 </code></pre></div>
 
+<div class="highlight"><pre><span></span><code><span class="n">Solution</span><span class="p">()</span><span class="o">.</span><span class="n">removeStars</span><span class="p">(</span><span class="s2">&quot;Hello*&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Hell&#39;
+</code></pre></div>
+
 <hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
@@ -489,11 +495,33 @@
 <span class="nv">Hello</span><span class="w"> </span><span class="nv">World</span><span class="o">!</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div>
 
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">4</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">4</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span><span class="mi">10</span>
+<span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Even&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odd …</span></code></pre></div><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
@@ -514,18 +542,32 @@
 
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+</code></pre></div>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://en.wikipedia.org/wiki/2024_Indian_Premier_League&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://en.wikipedia.org/wiki/2024_Indian_Premier_League&#39;</span><span class="p">)</span>
+</code></pre></div>
 
-<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+</code></pre></div>
 
-<span class="n">tags</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">tags</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Article: &quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </code></pre></div>
 
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
+<div class="highlight"><pre><span></span><code><span class="n">Article</span><span class="o">:</span><span class="w">  </span><span class="n">Contents</span>
+
+<span class="n">Article</span><span class="o">:</span><span class="w">  </span><span class="n">Background</span>
+
+<span class="n">Article</span><span class="o">:</span><span class="w">  </span><span class="n">Teams</span>
+
+<span class="n">Article</span><span class="o">:</span><span class="w">  </span><span class="n">Venues</span>
+
+<span class="n">Article</span><span class="o">:</span><span class="w">  </span><span class="n">Opening</span><span class="w"> </span><span class="n">ceremony</span>
+
+<span class="n">Article</span><span class="o">:</span><span class="w">  </span><span class="n">League</span><span class="w"> </span><span class="n">stage</span>
+
+<span class="n">Article</span><span class="o">:</span><span class="w">  </span><span class="n">Playoffs …</span></code></pre></div><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 

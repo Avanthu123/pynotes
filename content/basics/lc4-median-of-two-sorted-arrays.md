@@ -2,8 +2,8 @@
 title: Lc4-Median-Of-Two-Sorted-Arrays
 date: 2025-06-28
 author: Your Name
-cell_count: 3
-score: 0
+cell_count: 6
+score: 5
 ---
 
 https://leetcode.com/problems/median-of-two-sorted-arrays/
@@ -35,5 +35,41 @@ Solution().findMedianSortedArrays(nums1 = [1,1,2,4,6,8,9,11], nums2 = [3,4,9,13,
 
 
 
+```python
+Solution().findMedianSortedArrays(nums1 = [1,9,11], nums2 = [3,4,21])
+```
+
+
+
+
+    6.5
+
+
+
+
+```python
+Solution().findMedianSortedArrays(nums1 = [1], nums2 = [3])
+```
+
+
+
+
+    2.0
+
+
+
+
+```python
+Solution().findMedianSortedArrays(nums1 = [1], nums2 = [])
+```
+
+
+
+
+    1
+
+
+
+
 ---
-**Score: 0**
+**Score: 5**
