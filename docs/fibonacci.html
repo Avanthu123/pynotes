@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Testing</title>
+    <title>Fibonacci</title>
 
     <link rel="stylesheet" href="https://avanthu123.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://avanthu123.github.io/pynotes/theme/css/foundation.min.css" />
@@ -44,23 +44,33 @@
     <div class="large-9 columns">
 <article>
     <header>
-        <h3 class="article-title"><a href="https://avanthu123.github.io/pynotes/testing.html" rel="bookmark"
-        title="Permalink to Testing">Testing</a></h3>
+        <h3 class="article-title"><a href="https://avanthu123.github.io/pynotes/fibonacci.html" rel="bookmark"
+        title="Permalink to Fibonacci">Fibonacci</a></h3>
     </header>
 
 <h6 class="subheader" title="2025-06-28T00:00:00-04:00">Sat 28 June 2025
 </h6>
 
 
-    <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is for testing&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter number of terms to print in fibonacci series: &quot;</span><span class="p">))</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="nv">This</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">testing</span>
-<span class="nv">Hello</span><span class="w"> </span><span class="nv">World</span><span class="o">!</span>
+<div class="highlight"><pre><span></span><code>Enter number of terms to print in fibonacci series:  8
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="n">prevnum</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">nextnum</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prevnum</span><span class="p">,</span> <span class="n">nextnum</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">num</span> <span class="o">-</span> <span class="mi">2</span><span class="p">:</span>
+      <span class="n">number</span> <span class="o">=</span> <span class="n">prevnum</span><span class="o">+</span><span class="n">nextnum</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+      <span class="n">prevnum</span> <span class="o">=</span> <span class="n">nextnum</span>
+      <span class="n">nextnum</span> <span class="o">=</span> <span class="n">number</span>
+      <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="mf">13</span><span class="w"> </span><span class="mf">21</span>
 </code></pre></div>
 
 <hr>
