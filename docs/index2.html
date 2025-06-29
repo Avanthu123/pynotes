@@ -84,6 +84,114 @@
 
 
             <article>
+                <a href="https://avanthu123.github.io/pynotes/matplotlib-basics.html"><h3 class="article-title">Matplotlib-Basics</h3></a>
+<h6 class="subheader" title="2025-06-29T00:00:00-04:00">Sun 29 June 2025
+</h6>
+
+
+<h3>Simple plot</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># A simple example</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x axis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y axis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<p><img alt="png" src="/pynotes/images/matplotlib-basics_3_0.png"></p>
+<h3>Bar …</h3><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/data-visualisation.html">data-visualisation</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://avanthu123.github.io/pynotes/matplotlib-basics.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://avanthu123.github.io/pynotes/seaborn-basics.html"><h3 class="article-title">Seaborn-Basics</h3></a>
+<h6 class="subheader" title="2025-06-29T00:00:00-04:00">Sun 29 June 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;student_scores.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>StudentID</th>
+      <th>Math</th>
+      <th>Science</th>
+      <th>English</th>
+      <th>History</th>
+      <th>Geography</th>
+      <th>ComputerScience</th>
+      <th>Art</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>78</td>
+      <td>85</td>
+      <td>67</td>
+      <td>72</td>
+      <td>81</td>
+      <td>88</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <th>1 …</th></tr></tbody></table></div><p class="subheader">Category: <a href="https://avanthu123.github.io/pynotes/category/data-visualisation.html">data-visualisation</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://avanthu123.github.io/pynotes/seaborn-basics.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://avanthu123.github.io/pynotes/testing.html"><h3 class="article-title">Testing</h3></a>
 <h6 class="subheader" title="2025-06-29T00:00:00-04:00">Sun 29 June 2025
 </h6>
@@ -270,6 +378,7 @@
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
             <li><a href="https://avanthu123.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://avanthu123.github.io/pynotes/category/data-visualisation.html">data-visualisation</a></li>
             <li><a href="https://avanthu123.github.io/pynotes/category/leetcode.html">leetcode</a></li>
             <li><a href="https://avanthu123.github.io/pynotes/category/misc.html">misc</a></li>
             <li><a href="https://avanthu123.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
