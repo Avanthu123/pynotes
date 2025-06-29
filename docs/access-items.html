@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Add-A-New-Column</title>
+    <title>Access-Items</title>
 
     <link rel="stylesheet" href="https://avanthu123.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://avanthu123.github.io/pynotes/theme/css/foundation.min.css" />
@@ -44,15 +44,15 @@
     <div class="large-9 columns">
 <article>
     <header>
-        <h3 class="article-title"><a href="https://avanthu123.github.io/pynotes/add-a-new-column.html" rel="bookmark"
-        title="Permalink to Add-A-New-Column">Add-A-New-Column</a></h3>
+        <h3 class="article-title"><a href="https://avanthu123.github.io/pynotes/access-items.html" rel="bookmark"
+        title="Permalink to Access-Items">Access-Items</a></h3>
     </header>
 
 <h6 class="subheader" title="2025-06-29T00:00:00-04:00">Sun 29 June 2025
 </h6>
 
 
-    <p>Add a New Column</p>
+    <p>access-items</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 </code></pre></div>
 
@@ -66,12 +66,6 @@
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>{&#39;city&#39;: [&#39;Toronto&#39;, &#39;Montreal&#39;, &#39;Waterloo&#39;], &#39;points&#39;: [80, 70, 90]}
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>dict
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -122,10 +116,34 @@
 </table>
 </div>
 
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">code</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#acess a row</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
+<div class="highlight"><pre><span></span><code><span class="nx">city</span><span class="w">      </span><span class="nx">Toronto</span>
+<span class="nx">points</span><span class="w">         </span><span class="mi">80</span>
+<span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">dtype</span><span class="p">:</span><span class="w"> </span><span class="nx">object</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#access a column</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0</span><span class="w">    </span><span class="mf">80</span>
+<span class="mf">1</span><span class="w">    </span><span class="mf">70</span>
+<span class="mf">2</span><span class="w">    </span><span class="mf">90</span>
+<span class="n">Name</span><span class="p">:</span><span class="w"> </span><span class="n">points</span><span class="p">,</span><span class="w"> </span><span class="n">dtype</span><span class="p">:</span><span class="w"> </span><span class="nb">int</span><span class="mf">64</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#acess an item</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>np.int64(80)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#acess acc to condition</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Waterloo&#39;</span><span class="p">]</span>
 </code></pre></div>
 
 <div>
@@ -148,7 +166,41 @@
       <th></th>
       <th>city</th>
       <th>points</th>
-      <th>code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>Waterloo</td>
+      <td>90</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">]</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>points</th>
     </tr>
   </thead>
   <tbody>
@@ -156,26 +208,15 @@
       <th>0</th>
       <td>Toronto</td>
       <td>80</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Montreal</td>
-      <td>70</td>
-      <td>2</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Waterloo</td>
       <td>90</td>
-      <td>3</td>
     </tr>
   </tbody>
 </table>
 </div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
 
 <hr>
 <p><strong>Score: 10</strong></p>
